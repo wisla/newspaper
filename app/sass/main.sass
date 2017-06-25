@@ -1,0 +1,91 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+// html, body
+// 	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	background-color: #f9e7c7
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.container-fluid
+	margin-left: 25px
+	margin-right: 25px
+
+.row
+	border-bottom: 1px solid grey
+	// &:last-child
+	// 	p
+	// 		border: 2px solid yellow
+
+img
+	margin: 0 auto
+
+p
+	border-right: 1px solid grey
+	font-size: 13px
+	line-height: 18px
+	padding: 0 10px
+
+.row
+	div:last-child
+		.content
+			p
+				border: 0
+
+.contents
+	div:last-child
+		p
+			border: 0
+
+.content
+	img
+		float: right
+		padding: 0 10px 10px
+		max-width: 230px
+		height: auto
+.embed-responsive iframe 
+	padding-bottom: 20px
+.col-count-2
+	column-count: 2
+.col-count-3
+	column-count: 3
+.col-count-4
+	column-count: 4
+
+@import "media" // End
