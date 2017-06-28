@@ -36,7 +36,15 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
-	background-color: #f9e7c7
+	// background-color: #f9e7c7
+	background-image: url(../img/bg.png)
+
+header
+	font-weight: 500
+	line-height: 1.1
+	font-size: 120px
+	display: inline-block
+	margin-bottom: 20px
 
 .img-responsive
 	display: block
@@ -47,11 +55,8 @@ body
 	margin-left: 25px
 	margin-right: 25px
 
-.row
-	border-bottom: 1px solid grey
-	// &:last-child
-	// 	p
-	// 		border: 2px solid yellow
+	>.row
+		border-bottom: 1px solid grey
 
 img
 	margin: 0 auto
@@ -62,6 +67,11 @@ p
 	line-height: 18px
 	padding: 0 30px 0 0
 	text-align: justify
+	&:first-letter
+		color: blue
+		font-size: 18px
+		padding: 2px
+		font-weight: bold
 
 .row
 	div:last-child
@@ -89,13 +99,36 @@ p
 		a
 			color: #000
 			transition: all .3s ease
-			text-decoration: none
-			
+			text-decoration: none		
 	img
 		float: right
 		padding: 10px 30px 5px 10px
 		max-width: 230px
 		height: auto
+	.citation
+		font-size: 26px
+		line-height: 44px
+		text-align: center
+		font-weight: 400
+		display: block
+		margin: 40px 0 40px 0
+		font-feature-settings: "liga", "dlig"
+		&::before
+			border-top: 1px solid #2f2f2f
+			content: ''
+			width: 100px
+			height: 16px
+			display: block
+			margin: 0 auto
+		&::after
+			border-bottom: 1px solid #2f2f2f
+			content: ''
+			width: 100px
+			height: 16px
+			display: block
+			margin: 0 auto
+
+
 .embed-responsive iframe 
 	padding-bottom: 20px
 .col-count-2
@@ -114,11 +147,15 @@ p
 .modal
 	padding-right: 0px !important
 	&-dialog 
-		width: 60%
-		margin: 20px auto
+		width: 100%
+		margin: 0 auto
+	&-content
+		box-shadow: none
+		border: 0
+		border-radius: 0
 
 .modal-body
-	padding: 2vw
+	// padding: 2vw
 	overflow-y: auto
 	max-height: 85vh
 	.row
@@ -133,6 +170,9 @@ p
 			padding: 0 15px 5px 0
 .close
 	font-size: 35px
-
+.modal-backdrop
+	background-color: #fff
+.modal-backdrop.in
+	opacity: 1
 
 @import "media" // End
